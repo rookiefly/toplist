@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: toplist-web
+  cache:
+    cache-names: toplistCache
+    caffeine:
+      spec: maximumSize=500,expireAfterAccess=600s
+  mvc:
+    static-path-pattern: /**
+  profiles:
+    active: dev
